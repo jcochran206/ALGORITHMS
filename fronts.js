@@ -27,14 +27,25 @@ class SLL {
         removedNode.next = null;
         return this.head;
     }
+
+    front() {
+        if(!this.head) {
+            this.head = new_node;
+            return this;
+        }else{
+            return this.head.value; 
+        }
+    }
 }
 
-// let SLL1 = new SLL();
-// SLL1.addFront(18);
-// SLL1.addFront(5);
-// SLL1.addFront(30);
-// SLL1.removeFront(18);
-// console.log(SLL1);
+let SLL1 = new SLL();
+SLL1.addFront(18);
+SLL1.addFront(5);
+SLL1.addFront(30);
+SLL1.removeFront();
+console.log('front value',SLL1.front())
+console.log( 'sll state',SLL1);
+
 
 
 
