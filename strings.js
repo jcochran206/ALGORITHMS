@@ -8,6 +8,24 @@ function removeBlanks(str){
     return arr
 }
 console.log('remove blanks', removeBlanks("I can not BELIEVE it's not BUTTER"));
+//traditional way to remove blanks 
+function removeBlanks2(str){
+    //build new string due to immutable 
+    let newStr = '';
+    //loop thru given string
+    for(let i = 0; i < str.length; i++){
+    //remove if character is not a spaces from string
+         if(str[i] != " "){
+            //concat
+            newStr += str[i]
+         }
+    }
+    return newStr;
+    //return strring
+
+}
+console.log(removeBlanks2(" Pl ayTha tF u nkyM usi c "), ': newstring Funk')
+
 // Get Digits
 // Create a JavaScript function that given a string, 
 //returns the integer made from the string’s digits. 

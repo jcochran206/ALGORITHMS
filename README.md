@@ -1,2 +1,2 @@
 # ALGORITHMS
-These are just for 
+These are just practice
