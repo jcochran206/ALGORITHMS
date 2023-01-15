@@ -10,6 +10,10 @@ function removeBlanks(str){
 console.log('remove blanks', removeBlanks("I can not BELIEVE it's not BUTTER"));
 //traditional way to remove blanks 
 function removeBlanks2(str){
+    //edge cases 
+    if(str == ""){
+        return 'no string';
+    }
     //build new string due to immutable 
     let newStr = '';
     //loop thru given string
@@ -24,7 +28,7 @@ function removeBlanks2(str){
     //return strring
 
 }
-console.log(removeBlanks2(" Pl ayTha tF u nkyM usi c "), ': newstring Funk')
+console.log(removeBlanks2(""), ': newstring Funk')
 
 // Get Digits
 // Create a JavaScript function that given a string, 

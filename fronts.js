@@ -1,6 +1,6 @@
 class Node {
-    constructor(data){
-        this.data = data;
+    constructor(value){
+        this.value = value;
         this.next=null; 
     }
 }
@@ -36,6 +36,18 @@ class SLL {
             return this.head.value; 
         }
     }
+
+    //contains 
+    contains(value){
+        let runner = this.head;
+        while(runner){
+            if(runner.value === value){
+                return true
+            }
+            runner = runner.next
+        }
+        return false
+    }
 }
 
 let SLL1 = new SLL();
@@ -43,8 +55,11 @@ SLL1.addFront(18);
 SLL1.addFront(5);
 SLL1.addFront(30);
 SLL1.removeFront();
+SLL1.contains(18);
 console.log('front value',SLL1.front())
 console.log( 'sll state',SLL1);
+console.log('sll data is:', SLL1.contains(18));
+
 
 
 
