@@ -1,2 +1,2 @@
 # ALGORITHMS
-These are just practice
+Practice for data structures and alogrithms
