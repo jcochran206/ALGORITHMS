@@ -18,3 +18,16 @@ function rFact(num){
     return 1
 }
 console.log(rFact(6), 'factorial');
+
+//Write rFib(num). Recursively compute and return numth Fibonacci value. 
+//As earlier, treat first two (num = 0, num = 1) Fibonacci vals as 0 and 1. Examples: 
+function rFib(num) {
+    if (num === 0) {
+      return 0;
+    } else if (num === 1) {
+      return 1;
+    } else {
+      return rFib(num-1) + rFib(num-2);
+    }
+  }
+console.log(rFib(4));  
