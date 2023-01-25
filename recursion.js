@@ -30,4 +30,22 @@ function rFib(num) {
       return rFib(num-1) + rFib(num-2);
     }
   }
-console.log(rFib(4));  
+console.log(rFib(4)); 
+
+//Recursive Binary Search
+//Given a sorted array and a value, recursively determine whether value is found within array.
+function rBinarySearch(arr, num){
+  let mid = Math.floor(arr.length/2);
+  if(arr[mid] == num){
+    return true
+  }else if(num < arr[mid] && arr.length > 1){
+    return rBinarySearch(arr.slice(0, mid), num);
+  }else if(num > arr[mid] && arr.length > 1){
+    return rBinarySearch(arr.slice(mid, arr.length), num)
+  }else{
+    return false
+  }
+}
+
+console.log(rBinarySearch([1,2,3,5,6], 4), 'binary recursion'); //false
+console.log(rBinarySearch([1,2,3,5,6], 5), 'binary recursion'); //true
