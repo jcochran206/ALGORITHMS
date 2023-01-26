@@ -49,3 +49,26 @@ function rBinarySearch(arr, num){
 
 console.log(rBinarySearch([1,2,3,5,6], 4), 'binary recursion'); //false
 console.log(rBinarySearch([1,2,3,5,6], 5), 'binary recursion'); //true
+
+/*
+Given two integers, create rGCF(num1,num2) to recursively determine 
+Greatest Common Factor (the largest integer dividing evenly into both).
+Greek mathematician Euclid demonstrated these facts
+// gcf(a,b) == a, if a == b;
+// gcf(a,b) == gcf(a-b,b), if a>b;
+// gcf(a,b) == gcf(a,b-a), if b>a.
+*/
+function gcf(num1, num2){
+  if(num1 == num2){
+    return num1;
+  }
+  if(num1 > num2){
+    return gcf(num1-num2,num2)
+  }
+  if(num1 < num2){
+    return gcf(num1, num2-num1)
+  }
+}
+console.log(gcf(3, 7));    
+console.log(gcf(18, 27)); 
+console.log(gcf(49, 14));
