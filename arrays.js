@@ -66,3 +66,18 @@ function removeAt(arr, idx){
     return temp
 }
 console.log('removeAt',removeAt([8,20,55,44,98], 3))
+//Implement a function findSecondMaximum(arr), 
+//which returns the second largest element in the array.
+function findSecondMaximum(arr) {
+    var max = Number.NEGATIVE_INFINITY;
+    var secondmax = Number.NEGATIVE_INFINITY;
+    for (var val of arr) {
+        if (val > max) {
+            secondmax = max
+            max = val
+        } else if (val > secondmax && val!=max)
+            secondmax = val
+    }
+    return secondmax
+}
+console.log(findSecondMaximum([8,20,55,44,98], 'second max'))// 55
