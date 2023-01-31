@@ -112,3 +112,34 @@ function mergeArr(array1, array2){
     return mergedArr
 }
 console.log('merged', mergeArr([0,2,4,6],[1,3,5,7,9]))
+
+//given an array find the first pair of duplicates
+//array = [2,1,1,2,5,6,] returns 2
+function findDuplicates(arr){
+    //check basecase 
+    if(arr === 0){
+        return 'not array';
+    }
+   for(let i = 0; i < arr.length; i++){
+    for(let j = i +1; j < arr.length; j++){
+        if(arr[i] === arr[j]){
+            return arr[i]
+        }
+    }
+   }
+   return 'no duplicates'
+}
+console.log(findDuplicates([0,2,2,1,3,5]));
+
+function findDuplicatesMap(arr){
+    let map = {};
+    for(let i=0; i<arr.length; i++){
+        if(map[arr[i]] !== undefined){
+            return arr[i]
+        }else{
+            map[arr[i]] = i
+        }
+        console.log(map)
+    }
+}
+console.log(findDuplicatesMap([1,3,3,4,5,6]), ':dups with maps')
