@@ -81,3 +81,34 @@ function findSecondMaximum(arr) {
     return secondmax
 }
 console.log(findSecondMaximum([8,20,55,44,98], 'second max'))// 55
+
+//Given two arrays that are sorted. Can you merge the arrays into one single array
+function mergeArr(array1, array2){
+    const mergedArr = [];
+    let array1Item = array1[0];
+    let array2Item = array2[0];
+    let i = 1;
+    let j= 1;
+    //checks
+    if(array1.length === 0){
+        return array2
+    }
+    if(array2.length === 0){
+        return array1
+    }
+    while(array1Item || array2Item){
+        console.log(array1,array2);
+        if(!array2Item || array1Item < array2Item){
+            mergedArr.push(array1Item)
+            array1Item = array1[i]
+            i++
+        }else{
+            mergedArr.push(array2Item)
+            array2Item = array2[j];
+            j++;
+        }
+    }
+
+    return mergedArr
+}
+console.log('merged', mergeArr([0,2,4,6],[1,3,5,7,9]))
