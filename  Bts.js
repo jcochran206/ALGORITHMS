@@ -39,13 +39,28 @@ class BinarySearchTree {
     }
 
     contains(data){
-
+        if(!this.root){
+            return false;
+        }
+        let currentNode = this.root;
+        while(currentNode){
+            if(data < currentNode.data){
+                currentNode = currentNode.left;
+            }else if(data > currentNode.value){
+                currentNode = currentNode.right;
+            }else if(currentNode.data === data){
+                return currentNode;
+            }
+        }
+        return false;
     }
+
 }
 const tree = new BinarySearchTree();
 tree.add(9);
 tree.add(4);
 tree.add(20);
 tree.add(1);
+console.log(tree.contains(4));
 console.log(JSON.stringify(tree));
 
