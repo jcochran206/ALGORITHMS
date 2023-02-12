@@ -143,3 +143,14 @@ function findDuplicatesMap(arr){
     }
 }
 console.log(findDuplicatesMap([1,3,3,4,5,6]), ':dups with maps')
+
+function reverseArr(arr){
+    for (var i = 0; i < arr.length / 2; i++) {
+        // Swap values
+        var temp = arr[i];
+        arr[i] = arr[arr.length - 1 - i];
+        arr[arr.length - 1 - i] = temp;
+    }
+    return arr
+}
+console.log(reverseArr([1,3,3,4,5,6]), ":reverse array")

@@ -55,6 +55,10 @@ class BinarySearchTree {
         return false;
     }
 
+    remove(data){
+        
+    }
+
 }
 const tree = new BinarySearchTree();
 tree.add(9);
