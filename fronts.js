@@ -116,6 +116,25 @@ class SLL {
         runner.next = new Node(value);
         return this
     }
+    //reverse list 
+    reverse(){
+    //check if not only item
+        if(!this.head.next){
+            return this.head;
+        }
+        let first = this.head;
+        this.tail = this.head;
+        let second = this.next;
+        while(second){
+            const temp = second.next;
+            second.next = first;
+            first = second;
+            second = temp;
+        }
+        this.head.next = null;
+        this.head = first;
+        return this;
+    }
 
 }
 
@@ -133,6 +152,8 @@ console.log('sll data is:', SLL1.contains(18));
 console.log('sll length is:', SLL1.length());
 console.log('display', SLL1.display());
 console.log('min max: ', SLL1.maxMinAvg());
+console.log('reverse: ', SLL1.reverse());
+SLL1.display()
 
 
 
